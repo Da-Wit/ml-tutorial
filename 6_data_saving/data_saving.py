@@ -5,11 +5,12 @@ import time
 
 def createExamples():
     numberArrayExamples = open('6_data_saving/numArEx.txt','a')
-    numbersWeHave = range(1, 10)
+    numbersWeHave = range(0, 10)
+    numberOfNumbers = range(1, 10)
     print("numbersWeHave:",numbersWeHave)
     for eachNum in numbersWeHave:
         # print eachNum
-        for furtherNum in numbersWeHave:
+        for furtherNum in numberOfNumbers:
             print(str(eachNum) + '.' + str(furtherNum))
             imageFilePath = 'images/numbers/' + str(eachNum) + '.' + str(furtherNum) + '.png'
             ei = Image.open(imageFilePath)
